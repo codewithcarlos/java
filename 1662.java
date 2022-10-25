@@ -6,17 +6,17 @@
 // - after concatenating strings, can't use == to compare strings. have to use the equals method
 
 class Solution1 {
-    public boolean arrayStringsAreEqual(String[] word1, String[] word2) {
-        String w1 = "";
-        String w2 = "";
-        for (String s : word1) {
-            w1 += s;
-        }
-        for (String s : word2) {
-            w2 += s;
-        }
-        return w1.equals(w2);
-    }
+	public boolean arrayStringsAreEqual(String[] word1, String[] word2) {
+		String w1 = "";
+		String w2 = "";
+		for (String s : word1) {
+			w1 += s;
+		}
+		for (String s : word2) {
+			w2 += s;
+		}
+		return w1.equals(w2);
+	}
 }
 
 // Solution2: With StringBuilder
@@ -24,33 +24,16 @@ class Solution1 {
 // - use append to add letters
 // - use compareTo == 0 OR use toString() and equals()
 class Solution2 {
-    public boolean arrayStringsAreEqual(String[] word1, String[] word2) {
-        StringBuilder w1 = new StringBuilder();
-        StringBuilder w2 = new StringBuilder();
-        for (String s : word1) {
-            w1.append(s);
-        }
-        for (String s : word2) {
-            w2.append(s);
-        }
-        return w1.compareTo(w2) == 0;
-        // return w1.toString().equals(w2.toString());
-    }
+	public boolean arrayStringsAreEqual(String[] word1, String[] word2) {
+		StringBuilder w1 = new StringBuilder();
+		StringBuilder w2 = new StringBuilder();
+		for (String s : word1) {
+			w1.append(s);
+		}
+		for (String s : word2) {
+			w2.append(s);
+		}
+		return w1.compareTo(w2) == 0;
+		// return w1.toString().equals(w2.toString());
+	}
 }
-
-// Example Javascript solution
-// /**
-// * @param {string[]} word1
-// * @param {string[]} word2
-// * @return {boolean}
-// */
-// const arrayStringsAreEqual = function(word1, word2) {
-// let w1 = '', w2 = '';
-// for (let word of word1) {
-// w1 += word;
-// }
-// for (let word of word2) {
-// w2 += word;
-// }
-// return w1 === w2;
-// };
