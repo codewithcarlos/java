@@ -3,7 +3,7 @@ import java.util.Map;
 
 // https://leetcode.com/problems/longest-palindrome/description/
 
-class Solution {
+class BinarySearch {
   public int longestPalindrome(String s) {
     int leftover = 0;
     Map<Character, Integer> map = new HashMap<>();
@@ -21,5 +21,25 @@ class Solution {
       }
     }
     return result + leftover;
+  }
+}
+
+class TwoPointer {
+  public int[] sortedSquares(int[] nums) {
+    int[] result = new int[nums.length];
+    int l = 0;
+    int r = nums.length - 1;
+    int i = r;
+    while (l <= r) {
+      if (Math.abs(nums[l]) > Math.abs(nums[r])) {
+        result[i] = nums[l] * nums[l];
+        l++;
+      } else {
+        result[i] = nums[r] * nums[r];
+        r--;
+      }
+      i--;
+    }
+    return result;
   }
 }
