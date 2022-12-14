@@ -1,5 +1,4 @@
 // https://leetcode.com/problems/house-robber/
-package Dec_2022_Monthly_Challenge;
 
 class Solution {
   public int rob(int[] nums) {

@@ -1,5 +1,4 @@
 // https://leetcode.com/problems/maximum-product-of-splitted-binary-tree/
-package Dec_2022_Monthly_Challenge;
 
 class Solution {
   long result = 0;

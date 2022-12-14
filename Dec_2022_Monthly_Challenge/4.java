@@ -1,5 +1,4 @@
 // https://leetcode.com/problems/minimum-average-difference/
-package Dec_2022_Monthly_Challenge;
 
 class Solution {
   public int minimumAverageDifference(int[] nums) {

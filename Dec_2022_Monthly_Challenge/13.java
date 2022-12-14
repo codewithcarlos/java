@@ -1,5 +1,4 @@
 // https://leetcode.com/problems/minimum-falling-path-sum/
-package Dec_2022_Monthly_Challenge;
 
 class Solution {
   public int minFallingPathSum(int[][] matrix) {

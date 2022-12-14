@@ -1,5 +1,4 @@
 // https://leetcode.com/problems/odd-even-linked-list/
-package Dec_2022_Monthly_Challenge;
 
 class Solution {
   public ListNode oddEvenList(ListNode head) {

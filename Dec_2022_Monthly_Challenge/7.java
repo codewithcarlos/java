@@ -1,5 +1,4 @@
 // https://leetcode.com/problems/range-sum-of-bst/
-package Dec_2022_Monthly_Challenge;
 
 class Solution {
   int sum;

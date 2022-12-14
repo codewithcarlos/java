@@ -1,5 +1,4 @@
 // https://leetcode.com/problems/binary-tree-maximum-path-sum/
-package Dec_2022_Monthly_Challenge;
 
 class Solution {
   int sum = Integer.MIN_VALUE;

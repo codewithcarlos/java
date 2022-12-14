@@ -1,5 +1,4 @@
 // https://leetcode.com/problems/climbing-stairs/
-package Dec_2022_Monthly_Challenge;
 
 class Solution {
   public int climbStairs(int n) {

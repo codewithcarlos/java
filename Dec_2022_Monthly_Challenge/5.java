@@ -1,5 +1,4 @@
 // https://leetcode.com/problems/middle-of-the-linked-list/
-package Dec_2022_Monthly_Challenge;
 
 class Solution {
   public ListNode middleNode(ListNode head) {

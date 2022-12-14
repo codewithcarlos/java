@@ -1,5 +1,4 @@
 // https://leetcode.com/problems/maximum-difference-between-node-and-ancestor/
-package Dec_2022_Monthly_Challenge;
 
 class Solution {
   int result = 0;

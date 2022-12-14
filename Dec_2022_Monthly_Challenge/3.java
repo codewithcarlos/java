@@ -1,5 +1,4 @@
 // https://leetcode.com/problems/sort-characters-by-frequency/
-package Dec_2022_Monthly_Challenge;
 
 import java.util.*;
 

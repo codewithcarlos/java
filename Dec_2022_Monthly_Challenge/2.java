@@ -1,5 +1,4 @@
 // https://leetcode.com/problems/determine-if-two-strings-are-close/
-package Dec_2022_Monthly_Challenge;
 
 import java.util.*;
 
