@@ -19,13 +19,13 @@ class Solution {
     if (memo[p1][p2] > 0)
       return memo[p1][p2];
 
-    int option1 = recurse(p1 + 1, p2);
-    int idx = t2.indexOf(t1.charAt(p1), p2);
-    int option2 = 0;
-    if (idx > -1) {
-      option2 = 1 + recurse(p1 + 1, idx + 1);
+    int result = 0;
+    if (t1.charAt(p1) == t2.charAt(p2)) {
+      result = 1 + recurse(p1 + 1, p2 + 1);
+    } else {
+      result = Math.max(recurse(p1 + 1, p2), recurse(p1, p2 + 1));
     }
-    memo[p1][p2] = Math.max(option1, option2);
+    memo[p1][p2] = result;
     return memo[p1][p2];
   }
 }
