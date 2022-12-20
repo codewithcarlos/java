@@ -1,36 +1,20 @@
-// https://leetcode.com/problems/find-if-path-exists-in-graph/
+// https://leetcode.com/problems/daily-temperatures/description/
 
 import java.util.*;
 
 class Solution {
-  Map<Integer, Set<Integer>> map;
-  Set<Integer> set;
-
-  public boolean validPath(int n, int[][] edges, int source, int destination) {
-    map = new HashMap<>();
-    set = new HashSet<>();
-    for (int[] edge : edges) {
-      if (!map.containsKey(edge[0]))
-        map.put(edge[0], new HashSet<>());
-      map.get(edge[0]).add(edge[1]);
-      if (!map.containsKey(edge[1]))
-        map.put(edge[1], new HashSet<>());
-      map.get(edge[1]).add(edge[0]);
+  public int[] dailyTemperatures(int[] temperatures) {
+    int n = temperatures.length;
+    int[] result = new int[n];
+    Stack<Integer> stack = new Stack<>();
+    stack.add(0);
+    for (int i = 1; i < n; i++) {
+      while (!stack.isEmpty() && temperatures[i] > temperatures[stack.peek()]) {
+        int curr = stack.pop();
+        result[curr] = i - curr;
+      }
+      stack.add(i);
     }
-    return pathExists(source, destination);
-  }
-
-  public boolean pathExists(int source, int destination) {
-    if (set.contains(source))
-      return false;
-    Set<Integer> neighbors = map.getOrDefault(source, new HashSet<>());
-    if (neighbors.contains(destination) || source == destination)
-      return true;
-    set.add(source);
-    for (int neighbor : neighbors) {
-      if (pathExists(neighbor, destination))
-        return true;
-    }
-    return false;
+    return result;
   }
 }
