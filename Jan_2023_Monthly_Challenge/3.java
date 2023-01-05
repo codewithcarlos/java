@@ -1,5 +1,3 @@
-package Jan_2023_Monthly_Challenge;
-
 // https://leetcode.com/problems/delete-columns-to-make-sorted/
 
 class Solution {
